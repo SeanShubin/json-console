@@ -1,0 +1,36 @@
+{
+  reportDir app/target/detangled
+  searchPaths
+  [
+    ./app/target/json-console-app-0.1.0.jar
+  ]
+  level 2
+  startsWith
+  {
+    include
+    [
+      [
+        com
+        seanshubin
+        json
+        console
+      ]
+    ]
+    exclude []
+    drop
+    [
+      [
+        com
+        seanshubin
+        json
+        console
+      ]
+    ]
+  }
+  ignoreFiles []
+  canFailBuild true
+  ignoreJavadoc true
+  logTiming true
+  logEffectiveConfiguration true
+  allowedInCycle app/detangler-allowed-in-cycle.txt
+}

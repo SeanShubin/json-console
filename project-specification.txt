@@ -1,0 +1,44 @@
+{
+  prefix [com seanshubin]
+  name [json console]
+  description 'Get and set json values from the console'
+  version 0.1.0
+  language kotlin
+  developer {
+    name 'Sean Shubin'
+    githubName SeanShubin
+    mavenUserName SeanShubin
+    organization 'Sean Shubin'
+    url http://seanshubin.com/
+  }
+  dependencies {
+    stdlib {
+      group    org.jetbrains.kotlin
+      artifact kotlin-stdlib-jdk8
+    }
+    test {
+      group    org.jetbrains.kotlin
+      artifact kotlin-test-junit
+      scope    test
+    }
+    jackson {
+      group    com.fasterxml.jackson.module
+      artifact jackson-module-kotlin
+    }
+    jackson-time {
+      group    com.fasterxml.jackson.datatype
+      artifact jackson-datatype-jsr310
+    }
+  }
+  global [ stdlib test ]
+  modules {
+    app           [ domain ]
+    domain        [ jackson ]
+  }
+  detangler [app]
+  consoleEntryPoint {
+    console com.seanshubin.json.console.app.EntryPoint
+  }
+  javaVersion 17
+  deployableToMavenCentral true
+}

@@ -37,7 +37,7 @@
   }
   detangler [app]
   consoleEntryPoint {
-    console com.seanshubin.json.console.app.EntryPoint
+    app com.seanshubin.json.console.app.EntryPoint
   }
   javaVersion 17
   deployableToMavenCentral true

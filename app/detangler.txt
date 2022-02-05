@@ -2,7 +2,7 @@
   reportDir app/target/detangled
   searchPaths
   [
-    ./app/target/json-console-app-0.1.0.jar
+    ./app/target/json-console-app.jar
   ]
   level 2
   startsWith
